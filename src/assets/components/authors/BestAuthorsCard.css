@@ -1,0 +1,39 @@
+
+
+.author-card {
+  background: rgb(43, 177, 144);
+  border-radius: 10;
+  box-shadow: 0 4px 6px rgba(196, 16, 16, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  flex: 1 1 100%; 
+  max-width: 100%;
+}
+.bestAuthor-img {
+  height: 250;
+}
+.bestAuthor-details {
+  padding: 30px;
+}
+.delete-btn {
+  border: 1px solid rgb(103, 36, 36);
+}
+.bestAuthor-details h3 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #0d0b0b;
+}
+.bestAuthors-footer button {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  width: 30%;
+  height: 30px;
+  box-shadow: 0 4px 6px rgba(24, 5, 5, 0.1);
+  font-weight: 500;
+  background-color: white;
+  color: rgb(94, 35, 35);
+}
