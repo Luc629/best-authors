@@ -5,11 +5,25 @@ height:100vh;
 display:flex;
 justify-content: center;
 align-items: center;
-background-image: url("../../assests/img/books.png");
+background-image: url("../../img/books.png");
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
 
+}
+.header .heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
 
-
+.header .heading h1 {
+  font-family: "Dancing script", cursive;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 900;
+  text-shadow: rgb(133, 20, 20) 2px 2px;
 }

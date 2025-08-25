@@ -1,6 +1,7 @@
-import type { BestAuthor } from "../types";
+import type { bestAuthor } from "../../types";
 
-export const bestAuthors: BestAuthor [] = [
+
+export const bestAuthors: bestAuthor [] = [
     {
       id: "1",
       name: "Ayn Rand",
@@ -38,24 +39,3 @@ export const bestAuthors: BestAuthor [] = [
 
 
 
-
-{
-  "bestAuthors": [
-    {
-      "id": "1",
-      "text": "Ayn Rand",
-      "completed": true
-    },
-    {
-      "id": "2",
-      "text": "Stephen King",
-      "completed": false
-    },
-    {
-      "id": "3",
-      "text": "Julie Garwood",
-      "completed": false
-    }     
-    
-  ]
-}

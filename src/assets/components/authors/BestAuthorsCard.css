@@ -1,32 +1,59 @@
 
-
 .author-card {
   background: rgb(43, 177, 144);
-  border-radius: 10;
-  box-shadow: 0 4px 6px rgba(196, 16, 16, 0.1);
+  border-radius: 10px;
+  box-shadow: 6px 6px rgba(196, 16, 16, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   position: relative;
   flex: 1 1 100%; 
   max-width: 100%;
+  margin-top: 10px;
+  margin-bottom :10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
 }
+
 .bestAuthor-img {
-  height: 250;
+  height: 200;
+}
+
+.bestAuthors-img img {
+  z-index: 100;
+  width: 50%;
+  object-fit: cover;
+  max-height: 500px;
 }
 .bestAuthor-details {
-  padding: 30px;
+  padding: 20px;
 }
-.delete-btn {
-  border: 1px solid rgb(103, 36, 36);
-}
+
 .bestAuthor-details h3 {
   margin: 5px 0;
   font-size: 16px;
   color: #0d0b0b;
 }
-.bestAuthors-footer button {
+
+ .delete-btn {
+  border: 1px solid rgb(103, 36, 36);
+} 
+
+/* 
+.bestAuthors-details p {
+  font-size: 0.9rem;
+  color: #c52828;
+  line-height: 1.4;
+}
+
+.bestAuthors-details span {
+  font-size: 18px;
+  font-weight: 700;
+  color: blue; */
+/* } 
+/* .bestAuthors-footer button {
   padding: 5px 10px;
   font-size: 0.9rem;
   border-radius: 6px;
@@ -36,4 +63,4 @@
   font-weight: 500;
   background-color: white;
   color: rgb(94, 35, 35);
-}
+} */

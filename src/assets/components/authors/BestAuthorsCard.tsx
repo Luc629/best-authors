@@ -1,4 +1,4 @@
-import "./bestAuthorCard.css";
+import "./bestAuthorsCard.css";
 import type { bestAuthor } from "../../../types";
 
 
@@ -12,12 +12,13 @@ const bestAuthorsCard: React.FC<bestAuthorCardProps> = ({
   return (
     <div className="bestAuthor-card">
       <div className="bestAuthor-img">
-        <img src="{imgURL" alt={`${name}`}/>
-
+        <img src={imageURL} alt={name}/>
+    
       </div>
     <div className="bestAuthor-details">
       <p>
-        {description?.slice(0,300)}
+        {description?.slice(0,500)}...
+        <span className="view-more">View More</span>
       </p>
     
     </div>
