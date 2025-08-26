@@ -27,3 +27,23 @@ background-repeat: no-repeat;
   font-weight: 900;
   text-shadow: rgb(133, 20, 20) 4px 4px;
 }
+
+.header .heading button {
+  width: 250px;
+  height: 65px;
+  border-radius: 8px;
+  margin-top: 10px;
+  letter-spacing: 3px;
+  background: blue;
+  font-family: 'Courier New', Courier, monospace, cursive;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 5px;
+  outline: none;
+  border: 0.5px solid white;
+  transition: all 0.3s ease-in-out;
+}
+.header .heading button a {
+  text-decoration: wavy ;
+  color: rgb(232, 112, 112);
+}
