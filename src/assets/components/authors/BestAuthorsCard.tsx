@@ -11,6 +11,8 @@ const bestAuthorsCard: React.FC<bestAuthorCardProps> = ({
 }) => {
   return (
     <div className="bestAuthor-card">
+      <h1> {name}
+      </h1>
       <div className="bestAuthor-img">
         <img src={imageURL} alt={name}/>
     
