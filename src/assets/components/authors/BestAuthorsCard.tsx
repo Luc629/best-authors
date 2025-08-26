@@ -11,6 +11,7 @@ const bestAuthorsCard: React.FC<bestAuthorCardProps> = ({
 }) => {
   return (
     <div className="bestAuthor-card">
+      {/* style={{width: "10rem"}} */}
       <h1> {name}
       </h1>
       <div className="bestAuthor-img">
