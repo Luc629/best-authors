@@ -1,16 +1,18 @@
 import "./Header.css";
 import { type FC } from "react";
 
-const Header: FC = () => {
+interface HeaderProps {
+    addBestAuthors?: () => void;
+}
+
+const Header: FC<HeaderProps> = () => {
     return (
         <div className= "header">
             <div className= "heading">
                 <h1>Best Authors</h1>
             </div>
-            <button><a href="#bestAuthors"> Add Best Author</a>
-        </button>
-
-    </div>
+            
+        </div>
     )
 }
 
