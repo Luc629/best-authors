@@ -3,6 +3,7 @@ export type bestAuthor = {
     name: string;
     description: string;
     imageURL: string;
+    favorite: true
     
 }
 

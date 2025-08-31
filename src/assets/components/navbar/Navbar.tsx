@@ -23,14 +23,14 @@ const Navbar: FC<NavbarProps> = ({addBestAuthor}) => {
       return (
         <>
         <div className="navbar-menu">
-          
+          <ul>
             <li>
               <a className={scrolled ? "scrolled" : ""} href="/#bestAuthors"
               onClick={addBestAuthor}>
                 Add BestAuthor
               </a>
             </li>
-          
+          </ul>
         </div>
         
         </>

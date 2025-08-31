@@ -1,20 +1,34 @@
 import "./bestAuthorsCard.css";
 import type { bestAuthor } from "../../../types";
+import { IoMdHeartEmpty } from "react-icons/io";
+import { TiHeartFullOutline } from "react-icons/ti";
+
+
 
 
 interface bestAuthorCardProps {
     bestAuthor: bestAuthor;
-  deleteBestAuthor: (bestAuthorId:string) => void;
+    onDeleteBestAuthor: (bestAuthorId:string) => void;
+    onToggleFavorite: (bestAuthorsId: string) => void;
 }
 const BestAuthorsCard: React.FC<bestAuthorCardProps> = ({
-  bestAuthor,
-  deleteBestAuthor
+  bestAuthor: { id, name,description, imageURL },
+   onDeleteBestAuthor,
+   onToggleFavorite,
 
 }) => {
-  const {name,imageURL,description,id} = bestAuthor;
+  // const {name,imageURL,description,id} = bestAuthor;
   return (
     <div className="bestAuthor-card">
-      {/* style={{width: "10rem"}} */}
+      <div className="favorite-icon">
+        <div className="favorite-icon"> {favorite ? (
+            <TiHeartFullOutline onClick={() => onToggleFavorite(id)} />
+          ) : (
+            <IoMdHeartEmpty onClick={() => onToggleFavorite(id)} />
+          )}
+
+        </div>
+      </div>
       <h1> {name}
       </h1>
       <div className="bestAuthor-img">
@@ -30,7 +44,7 @@ const BestAuthorsCard: React.FC<bestAuthorCardProps> = ({
     </div>
    
     <div className="bestAuthor-footer">
-       <button className="delete-btn"onClick={() => deleteBestAuthor(id)}>
+       <button className="delete-btn"onClick={() => onDeleteBestAuthor(id)}>
         Delete
        </button>
        <button className="edit-btn" onClick={() => console.log('clicked')}>

@@ -1,8 +1,8 @@
 .bestAuthors-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
+    gap: 20px;
+    padding: 30px;
     margin-top: 10px;
     margin-bottom :10px;
     margin-left: 10px;
