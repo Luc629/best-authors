@@ -14,7 +14,7 @@ interface bestAuthorCardProps {
     showViewMore: (bestAuthorId: string) => void;  
 }
 const BestAuthorsCard: React.FC<bestAuthorCardProps> = ({
-  bestAuthor: { id, name,description, imageURL },
+  bestAuthor: { id, name,description, imageURL, favorite },
    onDeleteBestAuthor,
    onToggleFavorite,
    onEditBestAuthor,
@@ -25,7 +25,7 @@ const BestAuthorsCard: React.FC<bestAuthorCardProps> = ({
   return (
     <div className="bestAuthor-card">
       <div className="favorite-icon">
-        <div className="favorite-icon"> {favorite ? (
+        <div className="favorite-icon"> {favorite? (
             <TiHeartFullOutline onClick={() => onToggleFavorite(id)} />
           ) : (
             <IoMdHeartEmpty onClick={() => onToggleFavorite(id)} />

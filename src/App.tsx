@@ -52,6 +52,8 @@ function App () {
   };
   return (
     <div className= "page-container">
+      <div className="d-flex flex-wrap gap-3"> 
+      
       <Navbar addBestAuthor={addBestAuthor} />
       <Header />
       <BestAuthorsList 
@@ -66,7 +68,7 @@ function App () {
      )) }
 
     </div>
-    
+    </div>
     </div>
     
   )
