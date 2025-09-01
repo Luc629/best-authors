@@ -14,7 +14,7 @@ type bestAuthorsListProps = {
 const BestAuthorsList: FC<bestAuthorsListProps> = ({ bestAuthors, onDeleteBestAuthor, onToggleFavorite }) => {
     console.log({bestAuthors});
   return (
-    <div id="bestAuthors" className="bestAuthors-list">
+    <div id="bestAuthors" className="bestAuthor-list">
       {bestAuthors?.map((bestAuthor) => (
         <BestAuthorsCard 
         key={bestAuthor.id}  

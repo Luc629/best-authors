@@ -9,12 +9,16 @@ import { TiHeartFullOutline } from "react-icons/ti";
 interface bestAuthorCardProps {
     bestAuthor: bestAuthor;
     onDeleteBestAuthor: (bestAuthorId:string) => void;
-    onToggleFavorite: (bestAuthorsId: string) => void;
+    onToggleFavorite?: (bestAuthorsId: string, isFavorite: boolean) => void;
+    onEditBestAuthor: (bestAuthorId: string) => void;
+    showViewMore: (bestAuthorId: string) => void;  
 }
 const BestAuthorsCard: React.FC<bestAuthorCardProps> = ({
   bestAuthor: { id, name,description, imageURL },
    onDeleteBestAuthor,
    onToggleFavorite,
+   onEditBestAuthor,
+   
 
 }) => {
   // const {name,imageURL,description,id} = bestAuthor;
@@ -47,7 +51,7 @@ const BestAuthorsCard: React.FC<bestAuthorCardProps> = ({
        <button className="delete-btn"onClick={() => onDeleteBestAuthor(id)}>
         Delete
        </button>
-       <button className="edit-btn" onClick={() => console.log('clicked')}>
+       <button className="edit-btn" onClick={() => onEditBestAuthor(id)}>
           Edit
         </button>
 

@@ -16,7 +16,7 @@ function App () {
       name: "",
       description: "",
       imageURL: "",
-      favorite: false
+      favorite: true
 
     }
 
