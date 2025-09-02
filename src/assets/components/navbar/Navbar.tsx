@@ -22,15 +22,10 @@ const Navbar: FC<NavbarProps> = ({addBestAuthor}) => {
 
       return (
         <>
-        <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+        <div className="container">
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-menu">
           <ul>
-            <li>
-              <a className={scrolled ? "scrolled" : ""} href="#bestAuthors">
-                 Add BestAuthor
-              </a>
-            </li>
-
             <li>
               <a 
               className={scrolled ? "scrolled" : ""}
@@ -43,6 +38,7 @@ const Navbar: FC<NavbarProps> = ({addBestAuthor}) => {
           </ul>
         </div>
         </nav>
+        </div>
         </>
 
       );

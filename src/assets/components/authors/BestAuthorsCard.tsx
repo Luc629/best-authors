@@ -54,7 +54,7 @@ const BestAuthorsCard: React.FC<bestAuthorCardProps> = ({
        <button className="edit-btn" onClick={() => onEditBestAuthor(id)}>
           Edit
         </button>
-
+        
     </div>
 
     </div>
