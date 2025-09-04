@@ -7,17 +7,28 @@ import { useState } from 'react';
 import type { bestAuthor } from './types';
 import BestAuthorsList from './assets/components/authors/BestAuthorsList';
 
+
+// function App() {
+//   return (
+//     <div className="page-container">
+//       <Navbar />
+//       <Header />
+//       <BestAuthorsList bestAuthors={bestAuthors} />
+      
+//     </div>
+//   );
+// }
+
 function App () {
 
   const [bestAuthorsState, setBestAuthorsState] = useState(bestAuthors);
   const addBestAuthor = () => { 
     const newBestAuthor: bestAuthor = {
       id: `${Date.now()}`,
-      name: "",
-      description: "",
-      imageURL: "",
-      favorite: true
-
+      name: string,
+      description: string,
+      imageURL: string,
+      favorite: boolean
     }
 
     setBestAuthorsState((prevBestAuthors) => [newBestAuthor, ...prevBestAuthors]);
@@ -28,11 +39,9 @@ function App () {
    
   const deleteBestAuthor = (bestAuthorsId: string) => {
     setBestAuthorsState((prevBestAuthors) => {
-      return prevBestAuthors.filter((bestAuthor) => bestAuthor.id ! == bestAuthorsId);
+      return prevBestAuthors.filter((bestAuthor) => bestAuthor.id ! == bestAuthorId);
     });
-  // const updatedBestAuthors = bestAuthorsState.filter((bestAuthor) => 
-  //   bestAuthor.id !==bestAuthorsId);
-  //   setBestAuthorsState(updatedBestAuthors);
+  
  };
 
  const toggleFavorite = (bestAuthorId: string) => {
@@ -43,8 +52,8 @@ function App () {
           return {
             ...bestAuthor,
             favorite: !bestAuthor.favorite,
-
-          }
+            updatedAt: new Date().toISOString(),
+          };
         }
         return bestAuthor;
       });

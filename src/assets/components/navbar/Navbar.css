@@ -23,7 +23,7 @@
 }
 
 .page-container .navbar-brand a {
-  color: white;
+  color: rgb(232, 10, 10);
   text-decoration-color: black;
 }
 
@@ -37,4 +37,5 @@
 .page-container .navbar.scrolled {
   background-color: rgb(29, 225, 29); 
   font-size:xx-large ;
+
 }

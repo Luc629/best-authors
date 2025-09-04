@@ -1,4 +1,4 @@
-import "./Navbar.css";
+/* import "./Navbar.css";
 import { type FC, useEffect, useState } from "react";
 
 interface NavbarProps {
@@ -18,7 +18,7 @@ const Navbar: FC<NavbarProps> = ({addBestAuthor}) => {
             window.removeEventListener("scroll", handleScroll);
         };
     },
-      []);
+      []); 
 
       return (
         <>
@@ -44,4 +44,30 @@ const Navbar: FC<NavbarProps> = ({addBestAuthor}) => {
       );
       
 };
+export default Navbar;
+
+*/
+
+import Nav from 'react-bootstrap/Nav';
+
+function Navbar() {
+  return (
+    <Nav
+      activeKey="/home"
+      onSelect={(addBestAuthor) => alert(`selected ${addBestAuthor}`)}
+    >
+      <Nav.Item>
+        <Nav.Link href="/#bestAuthors">
+        Add Best Author</Nav.Link>
+      </Nav.Item>
+     
+      <Nav.Item>
+        <Nav.Link eventKey="link-1">Link</Nav.Link>
+      </Nav.Item>
+      
+      
+    </Nav>
+  );
+}
+
 export default Navbar;
