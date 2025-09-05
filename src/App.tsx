@@ -11,17 +11,6 @@ import EditBestAuthorModal from './assets/components/modals/EditBestAuthorModal'
 import DeleteModal from './assets/components/modals/DeleteModal';
 
 
-// function App() {
-//   return (
-//     <div className="page-container">
-//       <Navbar />
-//       <Header />
-//       <BestAuthorsList bestAuthors={bestAuthors} />
-      
-//     </div>
-//   );
-// }
-
 function App () {
 
   const [bestAuthorsState, setBestAuthorsState] = useState(bestAuthors) ;
@@ -122,10 +111,12 @@ const toggleFavorite = (bestAuthorId: string) => {
     });
   };
 
+
+
 return (
    
     <div className="page-container">
-
+      <Header />
       <Navbar handleOpenModal={handleOpenModal} />
 
         

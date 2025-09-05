@@ -2,12 +2,13 @@ import { useEffect, useState, type FC } from 'react';
 import { Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import type { bestAuthor } from '../../../types';
 
 interface EditBestAuthorModalProps {
   show: boolean;
   onHide: () => void;
-  onSubmit: (bestAuthorData: BestAuthor) => void;
-  bestAuthor: BestAuthor | null;
+  onSubmit: (bestAuthorData: bestAuthor) => void;
+  bestAuthor: bestAuthor | null;
 }
 
 const EditBestAuthorModal: FC<EditBestAuthorModalProps> = ({
@@ -18,13 +19,13 @@ const EditBestAuthorModal: FC<EditBestAuthorModalProps> = ({
 }) =>
   {
   // State for form data
-  const [formData, setFormData] = useState<BestAuthor>({
+  const [formData, setFormData] = useState<bestAuthor>({
     id: "",
     name: "",
     description: "",
-    imageUrl: "",
+    imageURL: "",
     favorite: false,
-    updatedAt: new Date().toISOString(),
+    // updatedAt: new Date().toISOString(),
     });
 
   useEffect(() => {
@@ -94,7 +95,7 @@ const EditBestAuthorModal: FC<EditBestAuthorModalProps> = ({
             <Form.Control
               type="url"
               name="imageUrl"
-              value={formData.imageUrl}
+              value={formData.imageURL}
               onChange={handleInputChange}
               placeholder="Enter image URL"
               required

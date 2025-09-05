@@ -9,33 +9,29 @@ import Card from 'react-bootstrap/Card';
 interface bestAuthorCardProps {
     bestAuthor: bestAuthor;
     onDeleteBestAuthor: (bestAuthorId:string) => void;
-    onToggleFavorite?: (bestAuthorsId: string, isFavorite: boolean) => void;
+    onToggleFavorite: (bestAuthorsId: string) => void;
     onEditBestAuthor: (bestAuthorId: string) => void;
-    showViewMore: (bestAuthorId: string) => void;  
+    
 }
 const BestAuthorsCard: React.FC<bestAuthorCardProps> = ({
   bestAuthor: { id, name,description, imageURL, favorite },
-   
+   onDeleteBestAuthor,
+   onEditBestAuthor,
+   onToggleFavorite,
 }) => {
   
-  function onDeleteBestAuthor(id: string): void {
-    throw new Error("Function not implemented.");
-  }
+  // function onDeleteBestAuthor(id: string): void {
+  //   throw new Error("Function not implemented.");
+  // }
 
   return (
   <div className="bestAuthor-card" key={id}>
     <Card style={{ width: '50rem' }}>
+      
       <Card.Img variant="top" src={imageURL} alt={name}/>
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <div className="favorite-icon">
-        <div className="favorite-icon"> {favorite? 
-            <TiHeartFullOutline/> :
-          
-            <IoMdHeartEmpty />}
-
-        </div>
-      </div>
+        
+        
       <h1> {name}
       </h1>
         <Card.Text>
@@ -46,7 +42,12 @@ const BestAuthorsCard: React.FC<bestAuthorCardProps> = ({
         </Card.Text>
         
         <div className="bestAuthor-footer">
-        <button className="delete-btn"onClick={() => onDeleteBestAuthor(id)}>
+
+      <button className="edit-btn" onClick={() => onEditBestAuthor(id)}>
+          Edit
+        </button>
+
+      <button className="delete-btn"onClick={() => onDeleteBestAuthor(id)}>
         Delete
        </button>
        

@@ -8,11 +8,11 @@ import BestAuthorsCard from "./BestAuthorsCard";
 type bestAuthorsListProps = {
   bestAuthors: bestAuthor[];
   onDeleteBestAuthor: (bestAuthorId: string) => void;
-
+  onEditBestAuthor: (bestAuthorId: string) => void;
+  onToggleFavorite: (bestAuthorId: string) => void;
 };
 
-
-const BestAuthorsList: FC<bestAuthorsListProps> = ({ bestAuthors, onDeleteBestAuthor, onToggleFavorite }) => {
+const BestAuthorsList: FC<bestAuthorsListProps> = ({ bestAuthors, onDeleteBestAuthor, onEditBestAuthor, onToggleFavorite }) => {
     console.log({bestAuthors});
   
   return (
@@ -23,11 +23,14 @@ const BestAuthorsList: FC<bestAuthorsListProps> = ({ bestAuthors, onDeleteBestAu
           bestAuthor={bestAuthor}
           onDeleteBestAuthor={onDeleteBestAuthor}
           onToggleFavorite={onToggleFavorite} 
-          onEditBestAuthor={function (bestAuthorId: string): void {
-            throw new Error("Function not implemented.");
-          } } showViewMore={function (bestAuthorId: string): void {
-            throw new Error("Function not implemented.");
-          } }        
+          onEditBestAuthor={onEditBestAuthor}
+          
+          // onEditBestAuthor=
+          // {function (bestAuthorId: string): void {
+          //   throw new Error("Function not implemented.");
+          // } } showViewMore={function (bestAuthorId: string): void {
+          //   throw new Error("Function not implemented.");
+          // } }        
         />
       ))}
     </div>

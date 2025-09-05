@@ -1,12 +1,13 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { type FC } from "react";
+import type { bestAuthor } from '../../../types';
 
 interface DeleteModalProps {
   show: boolean;
   onHide: () => void;
   onConfirm: () => void;
-  bestAuthor: BestAuthor | null;
+  bestAuthor: bestAuthor | null;
 }
 
 const DeleteModal: FC<DeleteModalProps> = ({
