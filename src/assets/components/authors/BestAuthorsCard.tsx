@@ -1,8 +1,5 @@
 import "./bestAuthorsCard.css";
 import type { bestAuthor } from "../../../types";
-import { IoMdHeartEmpty } from "react-icons/io";
-import { TiHeartFullOutline } from "react-icons/ti";
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
@@ -14,15 +11,12 @@ interface bestAuthorCardProps {
     
 }
 const BestAuthorsCard: React.FC<bestAuthorCardProps> = ({
-  bestAuthor: { id, name,description, imageURL, favorite },
+  bestAuthor: { id, name,description, imageURL },
    onDeleteBestAuthor,
    onEditBestAuthor,
-   onToggleFavorite,
 }) => {
   
-  // function onDeleteBestAuthor(id: string): void {
-  //   throw new Error("Function not implemented.");
-  // }
+  
 
   return (
   <div className="bestAuthor-card" key={id}>

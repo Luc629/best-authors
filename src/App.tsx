@@ -25,7 +25,7 @@ function App () {
     setShowModal(true);
   };
 
-  // Handler function to close the modal
+ 
   const handleCloseModal = () => {
     setShowModal(false);
   };

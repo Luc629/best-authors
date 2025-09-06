@@ -25,12 +25,7 @@ const BestAuthorsList: FC<bestAuthorsListProps> = ({ bestAuthors, onDeleteBestAu
           onToggleFavorite={onToggleFavorite} 
           onEditBestAuthor={onEditBestAuthor}
           
-          // onEditBestAuthor=
-          // {function (bestAuthorId: string): void {
-          //   throw new Error("Function not implemented.");
-          // } } showViewMore={function (bestAuthorId: string): void {
-          //   throw new Error("Function not implemented.");
-          // } }        
+             
         />
       ))}
     </div>
