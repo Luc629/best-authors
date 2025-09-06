@@ -31,7 +31,16 @@ export const bestAuthors: bestAuthor [] = [
       favorite: true,
 
     
-      }
+      },
+
+      // {
+      // id: "6",
+      // name: "Maya Angelou",
+      // description: "Maya Angelou is best known for her autobiographical works, especially the seminal 1969 book I Know Why the Caged Bird Sings, which explores themes of resilience, identity, and the impact of discrimination. She was also celebrated for her powerful poetry, including works like "On the Pulse of Morning," which she read at President Bill Clinton's inauguration, and her activism, which championed civil rights, racial justice, and Black feminism.",
+      // imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTutTP8pek6qyujoQFAE2Eg2TOrhvN5BXGe-Aix--FPTw&s",
+      // favorite: true,
+
+      // }
 
     
   ];

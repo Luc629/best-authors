@@ -7,7 +7,7 @@ import { Form } from 'react-bootstrap';
 interface NewBestAuthorModalProps {
   show: boolean;
   onHide: () => void;
-  onSubmit: (carData: NewBestAuthor) => void;
+  onSubmit: (bestAuthorData: NewBestAuthor) => void;
 }
 
 const NewBestAuthorModal: FC<NewBestAuthorModalProps> = ({ show, onHide, onSubmit }) => {
@@ -35,7 +35,7 @@ const handleInputChange = (
     onSubmit(formData);
     
     setFormData({
-      name: "",
+    name: "",
     description: "",
     imageURL: "",
     favorite: false,
@@ -88,7 +88,7 @@ const handleInputChange = (
             <Form.Label>Image URL</Form.Label>
             <Form.Control
               type="url"
-              name="imageUrl"
+              name="imageURL"
               value={formData.imageURL}
               onChange={handleInputChange}
               placeholder="Enter image URL"

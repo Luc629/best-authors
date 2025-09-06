@@ -25,7 +25,7 @@ const EditBestAuthorModal: FC<EditBestAuthorModalProps> = ({
     description: "",
     imageURL: "",
     favorite: false,
-    // updatedAt: new Date().toISOString(),
+  
     });
 
   useEffect(() => {
@@ -94,7 +94,7 @@ const EditBestAuthorModal: FC<EditBestAuthorModalProps> = ({
             <Form.Label>Image URL</Form.Label>
             <Form.Control
               type="url"
-              name="imageUrl"
+              name="imageURL"
               value={formData.imageURL}
               onChange={handleInputChange}
               placeholder="Enter image URL"

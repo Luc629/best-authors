@@ -20,7 +20,7 @@ const DeleteModal: FC<DeleteModalProps> = ({
   const handleConfirm = () => {
     onConfirm();
     onHide();
-  }; {
+  }; 
   
   
     return (
@@ -28,6 +28,7 @@ const DeleteModal: FC<DeleteModalProps> = ({
       className="modal show"
       style={{ display: 'block', position: 'initial' }}
     >
+      <Modal show={show} onHide={onHide} centered>
       <Modal.Dialog>
         <Modal.Header closeButton>
           <Modal.Title>Confirm Delete</Modal.Title>
@@ -38,7 +39,7 @@ const DeleteModal: FC<DeleteModalProps> = ({
           <p>
             Do you want to delete {" "} from the list?
             <strong>
-              {bestAuthor} 
+              {bestAuthor.name} 
             </strong>
             </p>
         ) : (
@@ -52,11 +53,12 @@ const DeleteModal: FC<DeleteModalProps> = ({
 
         <Modal.Footer>
           <Button variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
+          <Button variant="primary" onClick={handleConfirm}>Delete</Button>
         </Modal.Footer>
       </Modal.Dialog>
+      </Modal>
     </div>
   );
 }
-}
+
 export default DeleteModal;

@@ -59,7 +59,7 @@ const addBestAuthor = (newBestAuthorData: NewBestAuthor) => {
     const newBestAuthor: bestAuthor = {
       id: `${Date.now()}`,
       ...newBestAuthorData,
-      updatedAt: new Date().toISOString(),
+      
     };
 
     setBestAuthorsState((prevBestAuthors) => [newBestAuthor, ...prevBestAuthors]);
