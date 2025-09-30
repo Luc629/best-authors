@@ -13,6 +13,22 @@ import DeleteModal from './assets/components/modals/DeleteModal';
 
 function App () {
 
+  console.log('Loading best authors list...');
+$(document).ready(async function() {
+    const API_URL = 'http://localhost:3002/bestAuthors'; 
+
+
+
+        try {
+        const response = await fetch(API_URL);
+        const bestAuthors = await response.json();
+        return bestAuthors;
+    } catch (error) {
+        console.error('Error fetching bestAuthors:', error);
+        return [];
+    }
+    },
+  )
   const [bestAuthorsState, setBestAuthorsState] = useState(bestAuthors) ;
   
   const [showModal, setShowModal] = useState(false);
@@ -150,7 +166,9 @@ return (
         bestAuthor={bestAuthorToEdit}
       />
     </div>
+
   );
+
 
 
 
