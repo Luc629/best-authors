@@ -22,6 +22,7 @@ function App () {
   const [bestAuthorToDelete, setBestAuthorToDelete] = useState<bestAuthor | null>(null);
   const [bestAuthorToEdit, setBestAuthorToEdit] = useState<bestAuthor | null>(null);
 
+  
   console.log('Loading best authors list...');
   async function fetchBestAuthors() {
     try {
