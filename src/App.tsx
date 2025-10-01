@@ -12,23 +12,8 @@ import DeleteModal from './assets/components/modals/DeleteModal';
 
 
 function App () {
+  const API_URL = 'http://localhost:3002/bestAuthors'; 
 
-  console.log('Loading best authors list...');
-$(document).ready(async function() {
-    const API_URL = 'http://localhost:3002/bestAuthors'; 
-
-
-
-        try {
-        const response = await fetch(API_URL);
-        const bestAuthors = await response.json();
-        return bestAuthors;
-    } catch (error) {
-        console.error('Error fetching bestAuthors:', error);
-        return [];
-    }
-    },
-  )
   const [bestAuthorsState, setBestAuthorsState] = useState(bestAuthors) ;
   
   const [showModal, setShowModal] = useState(false);
@@ -36,6 +21,27 @@ $(document).ready(async function() {
   const [showEditModal, setShowEditModal] = useState(false);
   const [bestAuthorToDelete, setBestAuthorToDelete] = useState<bestAuthor | null>(null);
   const [bestAuthorToEdit, setBestAuthorToEdit] = useState<bestAuthor | null>(null);
+
+  console.log('Loading best authors list...');
+  async function fetchBestAuthors() {
+    try {
+      const response = await fetch (API_URL);
+      const bestAuthors = await response.json ();
+      return bestAuthors;
+    } catch (error) {
+      console.error('Error fetching bestAuthors:', error);
+        return [];
+
+    }
+  }
+
+  async function render() {
+    $ ("#bestAuthorsList").empty();
+    const bestAuthors = await fetchBestAuthors();
+
+          
+  }
+  render ();
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -128,8 +134,7 @@ const toggleFavorite = (bestAuthorId: string) => {
   };
 
 
-
-return (
+  return (
    
     <div className="page-container">
       <Header />
@@ -169,84 +174,5 @@ return (
 
   );
 
-
-
-
-
-
-
-
-
-
- 
- 
- 
- 
- 
- 
-//   const addBestAuthor = () => { 
-//     const newBestAuthor: bestAuthor = {
-//       id: `${Date.now()}`,
-//       name: "",
-//       description: "",
-//       imageURL: "",
-//       favorite: true
-//     }
-
-//     setBestAuthorsState((prevBestAuthors) => [newBestAuthor, ...prevBestAuthors]);
-
-//     }
- 
- 
-   
-//   const deleteBestAuthor = (bestAuthorsId: string) => {
-//     setBestAuthorsState((prevBestAuthors) => {
-//       return prevBestAuthors.filter((bestAuthor) => bestAuthor.id ! == bestAuthorId);
-//     });
-  
-//  };
-
-//  const toggleFavorite = (bestAuthorId: string) => {
-//     setBestAuthorsState ((prevBestAuthors) => {
-
-//       return prevBestAuthors.map((bestAuthor) => {
-//         if (bestAuthor.id === bestAuthorId) {
-//           return {
-//             ...bestAuthor,
-//             favorite: !bestAuthor.favorite,
-//             updatedAt: new Date().toISOString(),
-//           };
-//         }
-//         return bestAuthor;
-//       });
-//     });
-//   };
-//   return (
-//     <div className= "page-container">
-//       <div className="d-flex flex-wrap gap-3"> 
-      
-//       <Navbar addBestAuthor={addBestAuthor} />
-//       <Header />
-//       <BestAuthorsList 
-//         bestAuthors={bestAuthorsState}
-//         onDeleteBestAuthor={deleteBestAuthor}
-//         onToggleFavorite={toggleFavorite}/>
-      
-//       <div> { bestAuthors.map(bestAuthors => (
-//       <div>
-//         { bestAuthors.name}
-//       </div>
-//      )) }
-
-//     </div>
-//     </div>
-//     </div>
-    
-//   )
 };
-
- 
-
-  
-
 export default App;
